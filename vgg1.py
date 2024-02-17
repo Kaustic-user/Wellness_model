@@ -10,6 +10,7 @@ from tensorflow.keras.utils import to_categorical
 from sklearn.metrics import accuracy_score, roc_curve, auc, precision_recall_curve, confusion_matrix
 import matplotlib.pyplot as plt
 import time
+import pickle
 
 # Loading tabular dataset
 df = pd.read_csv('heart.csv')
