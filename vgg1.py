@@ -71,6 +71,10 @@ start_time = time.time()
 # Train the model
 history = Vggmodel.fit([X_train_scaled] * 3, y_train, epochs=10, batch_size=32, validation_data=([X_test_scaled] * 3, y_test))
 
+# Save the model to a pickle file
+with open('vgg_model.pkl', 'wb') as file:
+    pickle.dump(Vggmodel, file)
+
 end_time_training = time.time()
 
 # Time taken for training
